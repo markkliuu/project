@@ -59,11 +59,11 @@ public class DetailActivity extends AppCompatActivity {
         setTitle(country.getCountryCode());
         mCountry.setText(country.getCountry());
         mNewcases.setText(String.valueOf(country.getNewConfirmed()));
-      //  mTotalCases
         mNewDeath.setText(String.valueOf(country.getNewDeaths()));
         mTotalDeath.setText(String.valueOf(country.getTotalDeaths()));
         mTotalRecovered.setText(String.valueOf(country.getTotalRecovered()));
         mNewRecovered.setText(String.valueOf(country.getNewRecovered()));
+        mTotalcases.setText(String.valueOf(country.getTotalConfirmed()));
 
         mSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +78,7 @@ public class DetailActivity extends AppCompatActivity {
 
 
     private void searchCountry(String country) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://google.com/search?q=covid " + country));
+        Intent intent = new Intent(ACTION_VIEW, Uri.parse("http://google.com/search?q=covid " + country));
         startActivity(intent);
     }
 }
