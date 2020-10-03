@@ -25,11 +25,6 @@ public class DetailActivity extends AppCompatActivity {
     private TextView mTotalcases;
 
 
-    Intent intent = getIntent();
-    String countryCode = intent.getStringExtra(INTENT_MESSAGE);
-    private Object Intent;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +73,7 @@ public class DetailActivity extends AppCompatActivity {
 
 
     private void searchCountry(String country) {
-        Intent intent = new Intent(ACTION_VIEW, Uri.parse("http://google.com/search?q=covid " + country));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://google.com/search?q=covid " + country));
         startActivity(intent);
     }
 }
