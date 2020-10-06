@@ -1,6 +1,6 @@
 package au.edu.unsw.infs3634.covidtracker;
 
-        import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class Country {
 
@@ -36,7 +36,7 @@ public class Country {
         this.country = country;
     }
 
-    public static String getCountryCode() {
+    public String getCountryCode() {
         return countryCode;
     }
 

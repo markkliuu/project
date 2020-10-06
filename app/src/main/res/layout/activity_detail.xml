@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tvSearch"
+        android:id="@+id/ivSearch"
         android:layout_width="136dp"
         android:layout_height="25dp"
         android:layout_marginStart="16dp"
