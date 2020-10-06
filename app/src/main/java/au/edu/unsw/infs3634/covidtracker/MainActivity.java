@@ -2,6 +2,7 @@ package au.edu.unsw.infs3634.covidtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,9 @@ public class MainActivity extends AppCompatActivity {
     private String TAG = "MainActivity";
     private int age = 20;
 
+    private RecyclerView mRecyclerView;
+    private CountryAdapter mAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -18,14 +22,12 @@ public class MainActivity extends AppCompatActivity {
        // Log.d(TAG, msg:"onCreate line 15, Age = " + String.)
        // setContentView(R.layout.activity_main);
 
-    Button button = findViewById(R.id.btLaunchActivity);
+        mRecyclerView = findViewById(R.id.rvlist);
+        mRecyclerView.setHasFixedSize(true);
 
-    button.setOnClickListener(new View.OnClickListener(){
-    @Override
-    public void onClick(View v) {
-            MainActivity.this.launchDetailActivity("US");
-            }
-        });
+        CountryAdapter.RecyclerViewClickListener listener = new CountryAdapter.RecyclerViewListener();
+            @Override
+
 }
 
     private void launchDetailActivity(String message){

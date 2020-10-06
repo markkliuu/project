@@ -50,6 +50,7 @@ public class DetailActivity extends AppCompatActivity {
     ArrayList<Country> countries = Country.getCountries();
     for(final Country country : countries){
         if (country.getCountryCode().equals(countryCode))
+
         // update the textviews with the data of the country
         setTitle(country.getCountryCode());
         mCountry.setText(country.getCountry());

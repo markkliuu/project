@@ -36,7 +36,7 @@ public class Country {
         this.country = country;
     }
 
-    public String getCountryCode() {
+    public static String getCountryCode() {
         return countryCode;
     }
 
